@@ -1,0 +1,23 @@
+{
+  "name": "nodexlsxexample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "excelcsv": "^0.1.2",
+    "exceljs": "^4.3.0",
+    "install": "^0.13.0",
+    "node-xlsx": "^0.21.0",
+    "npm": "^8.12.1",
+    "read-excel-file": "^5.3.3",
+    "xlsx": "^0.18.5",
+    "xlsx-converter": "^0.1.0",
+    "xlsx2json": "^1.0.0"
+  }
+}
