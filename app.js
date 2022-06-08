@@ -55,15 +55,20 @@ const server = http.createServer((req, res) => {
 // console.log(workSheetsFromFile)
 // console.time("reading");
 
+
 const Excel = require('exceljs');
 const func = async () => {
-  const workbookReader = new Excel.stream.xlsx.WorkbookReader('fileName');
+  console.time('write')
+  const workbookReader = new Excel.stream.xlsx.WorkbookReader('/home/adroneleh/Downloads/1.xlsx');
   for await (const worksheetReader of workbookReader) {
     for await (const row of worksheetReader) {
-      // fs.appendFileSync("result.json", JSON.stringify(row));
-      console.log(row)
+
+      await fs.appendFileSync("result.json", JSON.stringify(row.values) );
     }
   }
+  console.timeEnd('write')
+  console.log("done")
+
 }
 
 func()
